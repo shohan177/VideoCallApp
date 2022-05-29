@@ -49,7 +49,9 @@ const Participants = (props) => {
       props.setActionVideo(currentParticipant.video)
 
     } else {
-      //props.setAction(false)
+      props.setAction(!currentParticipant.audio)
+      props.setActionVideo(!currentParticipant.video)
+
     }
     console.log("current perticepent--->", currentParticipant)
     const isCurrentUser = currentParticipant.currentUser;
