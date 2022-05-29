@@ -81,6 +81,16 @@ const MeetingFooter = (props) => {
 
   }, [props.handelControllAudio, props.handelControllVideo]);
 
+  useEffect(() => {
+    setSmic(props.handelControllAudio)
+    props.onMicClick(props.handelControllAudio);
+
+
+    setSvideo(props.handelControllVideo)
+    props.onVideoClick(props.handelControllVideo);
+
+  }, [props.handelControllAudio, props.handelControllVideo]);
+
 
 
   useEffect(() => {
